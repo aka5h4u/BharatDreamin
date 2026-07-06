@@ -191,7 +191,7 @@ a{
 <body>
 
 <div class="topbar">
-    <a href="#">CUFN Exchange</a>
+    <a href="#">India Exchange</a>
     <a href="#">Français</a>
 </div>
 
