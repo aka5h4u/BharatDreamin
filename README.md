@@ -1,664 +1,319 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharat Dreamin 2026 Demo</title>
 
-<title>Future Community Summit 2026</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-
+<style> 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
 }
-
 body{
-background:#f5f7fb;
-color:#222;
+    line-height:1.6;
+    color:#222;
 }
-
-header{
-
-position:fixed;
-top:0;
-left:0;
-right:0;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-padding:22px 8%;
-
-background:white;
-
-box-shadow:0 5px 20px rgba(0,0,0,.06);
-
-z-index:999;
-
+a{
+    text-decoration:none;
+    color:inherit;
 }
-
+.topbar{
+    background:#222;
+    color:#fff;
+    padding:8px 30px;
+    font-size:14px;
+    display:flex;
+    justify-content:flex-end;
+    gap:20px;
+}
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:#fff;
+    border-bottom:1px solid #ddd;
+}
 .logo{
-
-font-size:28px;
-font-weight:800;
-color:#0176D3;
-
+    font-size:28px;
+    font-weight:bold;
+    color:#036A38;
 }
-
-nav{
-
-display:flex;
-gap:35px;
-
+.header-buttons{
+    display:flex;
+    gap:15px;
 }
-
-nav a{
-
-text-decoration:none;
-color:#444;
-font-weight:600;
-
-transition:.3s;
-
+.btn{
+    padding:10px 20px;
+    border-radius:25px;
+    border:2px solid #036A38;
+    color:#036A38;
+    font-weight:bold;
+    transition:0.3s;
 }
-
-nav a:hover{
-
-color:#0176D3;
-
+.btn:hover{
+    background:#036A38;
+    color:#fff;
 }
-
+.navbar{
+    background:#036A38;
+    color:#fff;
+}
+.navbar ul{
+    display:flex;
+    list-style:none;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.navbar li{
+    padding:18px 20px;
+    cursor:pointer;
+}
+.navbar li:hover{
+    background:#02572d;
+}
 .hero{
-
-padding-top:140px;
-
-padding-left:8%;
-padding-right:8%;
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-min-height:95vh;
-
+    height:500px;
+    background:url('https://images.unsplash.com/photo-1448375240586-882707db888b') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
 }
-
-.left{
-
-width:55%;
-
+.hero h1{
+    font-size:52px;
+    background:rgba(0,0,0,0.45);
+    padding:20px 30px;
+    border-radius:8px;
 }
-
-.badge{
-
-display:inline-block;
-
-background:#EAF5FF;
-
-color:#0176D3;
-
-padding:8px 18px;
-
-border-radius:50px;
-
-font-weight:600;
-
-margin-bottom:25px;
-
+.cta{
+    padding:60px 20px;
+    text-align:center;
+    background:#fff;
 }
-
-h1{
-
-font-size:64px;
-
-line-height:1.15;
-
-margin-bottom:25px;
-
+.cta h2{
+    font-size:38px;
+    margin-bottom:20px;
+    color:#036A38;
 }
-
-.hero p{
-
-font-size:20px;
-
-line-height:1.8;
-
-color:#666;
-
-margin-bottom:40px;
-
+.cta p{
+    max-width:900px;
+    margin:auto;
+    margin-bottom:25px;
+    font-size:18px;
 }
-
-.buttons{
-
-display:flex;
-gap:18px;
-
+.cta .btn{
+    background:#036A38;
+    color:#fff;
 }
-
-button{
-
-padding:16px 32px;
-
-border:none;
-
-border-radius:12px;
-
-font-size:16px;
-
-font-weight:600;
-
-cursor:pointer;
-
+.news-section{
+    display:flex;
+    flex-wrap:wrap;
+    padding:50px 30px;
+    background:#f8f8f8;
 }
-
-.primary{
-
-background:#0176D3;
-color:white;
-
+.sidebar{
+    flex:1;
+    min-width:250px;
+    max-width:300px;
+    background:#fff;
+    padding:25px;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
-
-.secondary{
-
-background:white;
-border:2px solid #0176D3;
-color:#0176D3;
-
+.sidebar h3{
+    margin-bottom:20px;
+    color:#036A38;
 }
-
-.right{
-
-width:36%;
-
+.sidebar ul{
+    list-style:none;
 }
-
-.event-card{
-
-background:white;
-
-padding:35px;
-
-border-radius:22px;
-
-box-shadow:0 30px 60px rgba(0,0,0,.08);
-
+.sidebar li{
+    padding:12px 0;
+    border-bottom:1px solid #ddd;
+    cursor:pointer;
 }
-
-.event-card h3{
-
-margin-bottom:25px;
-
-color:#0176D3;
-
+.sidebar li:hover{
+    color:#036A38;
 }
-
-.stat{
-
-display:flex;
-justify-content:space-between;
-
-padding:18px 0;
-
-border-bottom:1px solid #eee;
-
+.cards{
+    flex:3;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding-left:30px;
 }
-
-.section{
-
-padding:90px 8%;
-
-}
-
-.section-title{
-
-font-size:40px;
-
-margin-bottom:15px;
-
-}
-
-.section-sub{
-
-color:#666;
-
-margin-bottom:45px;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:25px;
-
-}
-
 .card{
-
-background:white;
-
-padding:30px;
-
-border-radius:18px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.05);
-
-transition:.3s;
-
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
-
-.card:hover{
-
-transform:translateY(-8px);
-
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
 }
-
-.card h3{
-
-margin-bottom:15px;
-
-color:#0176D3;
-
+.card-content{
+    padding:20px;
 }
-
-.timeline{
-
-display:flex;
-
-justify-content:space-between;
-
-margin-top:50px;
-
-gap:15px;
-
+.card-content h4{
+    margin-bottom:10px;
+    color:#036A38;
 }
-
-.step{
-
-flex:1;
-
-background:white;
-
-padding:25px;
-
-border-radius:15px;
-
-text-align:center;
-
-box-shadow:0 8px 20px rgba(0,0,0,.05);
-
+.footer{
+    background:#222;
+    color:#fff;
+    text-align:center;
+    padding:20px;
 }
-
-.number{
-
-width:50px;
-height:50px;
-
-background:#0176D3;
-
-border-radius:50%;
-
-color:white;
-
-display:flex;
-
-justify-content:center;
-align-items:center;
-
-margin:auto;
-margin-bottom:18px;
-
-font-weight:bold;
-
+@media(max-width:768px){
+    .header{
+        flex-direction:column;
+        gap:15px;
+    }
+    .hero h1{
+        font-size:32px;
+    }
+    .news-section{
+        flex-direction:column;
+    }
+    .cards{
+        padding-left:0;
+        margin-top:20px;
+    }
 }
-
-footer{
-
-background:#0B2239;
-
-color:white;
-
-padding:60px 8%;
-
-margin-top:80px;
-
-text-align:center;
-
-}
-
-@media(max-width:900px){
-
-.hero{
-
-flex-direction:column;
-
-text-align:center;
-
-}
-
-.left,.right{
-
-width:100%;
-
-}
-
-.grid{
-
-grid-template-columns:1fr;
-
-}
-
-.timeline{
-
-flex-direction:column;
-
-}
-
-nav{
-
-display:none;
-
-}
-
-h1{
-
-font-size:42px;
-
-}
-
-}
-
 </style>
-
 </head>
-
 <body>
 
-<header>
-
-<div class="logo">
-
-Future Summit
-
+<div class="topbar">
+    <a href="#">CUFN Exchange</a>
+    <a href="#">Français</a>
 </div>
 
-<nav>
-
-<a href="#">Home</a>
-
-<a href="#">Speakers</a>
-
-<a href="#">Agenda</a>
-
-<a href="#">Sponsors</a>
-
-<a href="#">Venue</a>
-
-<a href="#">Contact</a>
-
-</nav>
-
+<header class="header">
+    <div class="logo">🌳 Green India - Clean India 🌳</div>
+    <div class="header-buttons">
+        <a href="#" class="btn">Search</a>
+        <a href="#" class="btn">Donate</a>
+    </div>
 </header>
 
+<nav class="navbar">
+    <ul>
+        <li>About Us</li>
+        <li>Our Programs</li>
+        <li>Research & Engagement</li>
+        <li>Grants & Awards</li>
+        <li>Resources</li>
+        <li>Take Action</li>
+    </ul>
+</nav>
+
 <section class="hero">
-
-<div class="left">
-
-<div class="badge">
-
-Community Conference • 2026
-
-</div>
-
-<h1>
-
-Where Innovation,<br>
-Community & AI<br>
-Come Together
-
-</h1>
-
-<p>
-
-Join thousands of trailblazers, nonprofits, developers, architects, admins and business leaders for an unforgettable learning experience packed with inspiration, networking and innovation.
-
-</p>
-
-<div class="buttons">
-
-<button class="primary">
-
-Register Now
-
-</button>
-
-<button class="secondary">
-
-Become a Sponsor
-
-</button>
-
-</div>
-
-</div>
-
-<div class="right">
-
-<div class="event-card">
-
-<h3>
-
-Event Highlights
-
-</h3>
-
-<div class="stat">
-
-<span>Date</span>
-
-<strong>August 2026</strong>
-
-</div>
-
-<div class="stat">
-
-<span>Attendees</span>
-
-<strong>3500+</strong>
-
-</div>
-
-<div class="stat">
-
-<span>Sessions</span>
-
-<strong>120+</strong>
-
-</div>
-
-<div class="stat">
-
-<span>Speakers</span>
-
-<strong>90+</strong>
-
-</div>
-
-<div class="stat">
-
-<span>Communities</span>
-
-<strong>40+</strong>
-
-</div>
-
-</div>
-
-</div>
-
+    <h1>Growing Better India to Live</h1>
 </section>
 
-<section class="section">
-
-<h2 class="section-title">
-
-Conference Experience
-
-</h2>
-
-<p class="section-sub">
-
-Everything you need to learn, connect and grow.
-
-</p>
-
-<div class="grid">
-
-<div class="card">
-
-<h3>
-
-🎤 Inspiring Sessions
-
-</h3>
-
-<p>
-
-Technical deep dives, product updates and inspiring customer stories.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-🤝 Networking
-
-</h3>
-
-<p>
-
-Meet Salesforce professionals from around the world.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-🚀 Innovation Hub
-
-</h3>
-
-<p>
-
-Experience AI, Agentforce and next-generation Salesforce solutions.
-
-</p>
-
-</div>
-
-</div>
-
+<section class="cta">
+    <h2>Growing Better India to Live</h2>
+    <p>
+        Green India is the only national non-profit organization dedicated to planting and nurturing trees
+        in rural and urban environments across the country.
+    </p>
+    <a href="#" class="btn">Plant Trees</a>
 </section>
 
-<section class="section">
+<section class="news-section">
+    <aside class="sidebar">
+        <h3>What's New</h3>
+        <ul>
+            <li onclick="filterCards('featured')">Featured</li>
+            <li onclick="filterCards('programs')">Our Programs</li>
+            <li onclick="filterCards('stories')">News & Stories</li>
+            <li onclick="showAllCards()">Show All</li>
+        </ul>
+    </aside>
 
-<h2 class="section-title">
+    <div class="cards" id="cardsContainer">
+        <div class="card featured">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="">
+            <div class="card-content">
+                <h4>Community Tree Grants</h4>
+                <p>Helping communities plant and care for trees.</p>
+            </div>
+        </div>
 
-Your Journey
+        <div class="card programs">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="">
+            <div class="card-content">
+                <h4>National Greening Program</h4>
+                <p>Supporting reforestation projects nationwide.</p>
+            </div>
+        </div>
 
-</h2>
-
-<div class="timeline">
-
-<div class="step">
-
-<div class="number">1</div>
-
-Register
-
-</div>
-
-<div class="step">
-
-<div class="number">2</div>
-
-Explore Sessions
-
-</div>
-
-<div class="step">
-
-<div class="number">3</div>
-
-Connect
-
-</div>
-
-<div class="step">
-
-<div class="number">4</div>
-
-Learn
-
-</div>
-
-<div class="step">
-
-<div class="number">5</div>
-
-Build
-
-</div>
-
-</div>
-
+        <div class="card stories">
+            <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07" alt="">
+            <div class="card-content">
+                <h4>Success Stories</h4>
+                <p>Read about our impact in communities.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- Agentforce can be embedded here -->
-
-<div id="agentforce-container"></div>
-
-<footer>
-
-<h2>
-
-Future Summit 2026
-
-</h2>
-
-<br>
-
-<p>
-
-Learn. Connect. Innovate.
-
-</p>
-
-<br>
-
-<p>
-
-© 2026 Future Summit. All Rights Reserved.
-
-</p>
-
+<footer class="footer">
+    © 2026 Green India Demo. All rights reserved.
 </footer>
+
+<script>
+function filterCards(category){
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card=>{
+        if(card.classList.contains(category)){
+            card.style.display='block';
+        } else {
+            card.style.display='none';
+        }
+    });
+}
+
+function showAllCards(){
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card=>{
+        card.style.display='block';
+    });
+}
+</script>
+
+<!-- Salesforce Embedded Messaging -->
+<script type='text/javascript'>
+    function initEmbeddedMessaging() {
+        try {
+            embeddedservice_bootstrap.settings.language = 'en_US';
+
+            embeddedservice_bootstrap.init(
+                '00DgL00000OQ3nd',
+                'Github_Messaging_Setting',
+                'https://saastrion-dev-ed.develop.my.site.com/ESWGithubMessagingSetti1776887653761',
+                {
+                    scrt2URL: 'https://saastrion-dev-ed.develop.my.salesforce-scrt.com'
+                }
+            );
+        } catch (err) {
+            console.error('Error loading Embedded Messaging: ', err);
+        }
+    };
+</script>
+
+<script 
+    type='text/javascript' 
+    src='https://saastrion-dev-ed.develop.my.site.com/ESWGithubMessagingSetti1776887653761/assets/js/bootstrap.min.js' 
+    onload='initEmbeddedMessaging()'>
+</script>
 
 </body>
 </html>
