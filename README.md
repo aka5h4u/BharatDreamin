@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Educators For Good</title>
+<title>Future Community Summit 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,203 +19,367 @@ font-family:'Inter',sans-serif;
 }
 
 body{
-background:#f6f8fb;
+background:#f5f7fb;
 color:#222;
 }
 
 header{
-background:white;
-padding:20px 60px;
+
+position:fixed;
+top:0;
+left:0;
+right:0;
+
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 12px rgba(0,0,0,.05);
-position:sticky;
-top:0;
+
+padding:22px 8%;
+
+background:white;
+
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+
+z-index:999;
+
 }
 
 .logo{
+
 font-size:28px;
-font-weight:700;
+font-weight:800;
 color:#0176D3;
+
+}
+
+nav{
+
+display:flex;
+gap:35px;
+
 }
 
 nav a{
-margin-left:30px;
+
 text-decoration:none;
 color:#444;
-font-weight:500;
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#0176D3;
+
 }
 
 .hero{
+
+padding-top:140px;
+
+padding-left:8%;
+padding-right:8%;
+
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:80px;
+
+min-height:95vh;
+
 }
 
-.hero-text{
+.left{
+
 width:55%;
+
 }
 
-.hero h1{
-font-size:58px;
-line-height:1.2;
-margin-bottom:20px;
+.badge{
+
+display:inline-block;
+
+background:#EAF5FF;
+
+color:#0176D3;
+
+padding:8px 18px;
+
+border-radius:50px;
+
+font-weight:600;
+
+margin-bottom:25px;
+
+}
+
+h1{
+
+font-size:64px;
+
+line-height:1.15;
+
+margin-bottom:25px;
+
 }
 
 .hero p{
+
 font-size:20px;
+
+line-height:1.8;
+
 color:#666;
-margin-bottom:35px;
+
+margin-bottom:40px;
+
+}
+
+.buttons{
+
+display:flex;
+gap:18px;
+
 }
 
 button{
-padding:16px 28px;
+
+padding:16px 32px;
+
 border:none;
-border-radius:10px;
+
+border-radius:12px;
+
 font-size:16px;
+
+font-weight:600;
+
 cursor:pointer;
-margin-right:15px;
+
 }
 
 .primary{
+
 background:#0176D3;
 color:white;
+
 }
 
 .secondary{
+
 background:white;
 border:2px solid #0176D3;
 color:#0176D3;
+
 }
 
-.hero-card{
-width:360px;
+.right{
+
+width:36%;
+
+}
+
+.event-card{
+
 background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+padding:35px;
+
+border-radius:22px;
+
+box-shadow:0 30px 60px rgba(0,0,0,.08);
+
 }
 
-.hero-card h3{
-margin-bottom:15px;
+.event-card h3{
+
+margin-bottom:25px;
+
 color:#0176D3;
-}
 
-.stats{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-padding:50px 80px;
 }
 
 .stat{
-background:white;
-padding:30px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.05);
-}
 
-.stat h2{
-color:#0176D3;
-margin-bottom:10px;
+display:flex;
+justify-content:space-between;
+
+padding:18px 0;
+
+border-bottom:1px solid #eee;
+
 }
 
 .section{
-padding:70px 80px;
+
+padding:90px 8%;
+
 }
 
-.cards{
+.section-title{
+
+font-size:40px;
+
+margin-bottom:15px;
+
+}
+
+.section-sub{
+
+color:#666;
+
+margin-bottom:45px;
+
+}
+
+.grid{
+
 display:grid;
+
 grid-template-columns:repeat(3,1fr);
+
 gap:25px;
-margin-top:30px;
+
 }
 
 .card{
+
 background:white;
-padding:25px;
-border-radius:15px;
+
+padding:30px;
+
+border-radius:18px;
+
 box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
 }
 
 .card h3{
+
 margin-bottom:15px;
+
 color:#0176D3;
+
 }
 
-.chat{
-position:fixed;
-right:30px;
-bottom:30px;
-width:370px;
-background:white;
-border-radius:20px;
-box-shadow:0 15px 50px rgba(0,0,0,.25);
-overflow:hidden;
-}
+.timeline{
 
-.chat-header{
-background:#0176D3;
-color:white;
-padding:18px;
-font-size:18px;
-font-weight:600;
-}
-
-.chat-body{
-padding:18px;
-height:340px;
-overflow:auto;
-background:#f9fbff;
-}
-
-.message{
-margin-bottom:15px;
-padding:12px 15px;
-border-radius:12px;
-max-width:90%;
-}
-
-.bot{
-background:white;
-}
-
-.user{
-background:#0176D3;
-color:white;
-margin-left:auto;
-}
-
-.chat-footer{
-padding:15px;
 display:flex;
-gap:10px;
+
+justify-content:space-between;
+
+margin-top:50px;
+
+gap:15px;
+
 }
 
-.chat-footer input{
+.step{
+
 flex:1;
-padding:12px;
-border-radius:8px;
-border:1px solid #ddd;
-}
 
-.chat-footer button{
-background:#0176D3;
-color:white;
-padding:12px 18px;
-margin:0;
-}
+background:white;
 
-.footer{
-padding:40px;
+padding:25px;
+
+border-radius:15px;
+
 text-align:center;
-color:#777;
+
+box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+.number{
+
+width:50px;
+height:50px;
+
+background:#0176D3;
+
+border-radius:50%;
+
+color:white;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+margin:auto;
+margin-bottom:18px;
+
+font-weight:bold;
+
+}
+
+footer{
+
+background:#0B2239;
+
+color:white;
+
+padding:60px 8%;
+
+margin-top:80px;
+
+text-align:center;
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.left,.right{
+
+width:100%;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.timeline{
+
+flex-direction:column;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+h1{
+
+font-size:42px;
+
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
@@ -222,15 +387,23 @@ color:#777;
 <header>
 
 <div class="logo">
-Educators For Good
+
+Future Summit
+
 </div>
 
 <nav>
 
 <a href="#">Home</a>
-<a href="#">Programs</a>
-<a href="#">Grants</a>
-<a href="#">Impact</a>
+
+<a href="#">Speakers</a>
+
+<a href="#">Agenda</a>
+
+<a href="#">Sponsors</a>
+
+<a href="#">Venue</a>
+
 <a href="#">Contact</a>
 
 </nav>
@@ -239,117 +412,163 @@ Educators For Good
 
 <section class="hero">
 
-<div class="hero-text">
+<div class="left">
+
+<div class="badge">
+
+Community Conference • 2026
+
+</div>
 
 <h1>
-Empowering Education Through Smart Grant Management
+
+Where Innovation,<br>
+Community & AI<br>
+Come Together
+
 </h1>
 
 <p>
-Helping nonprofits discover funding opportunities, manage grants, and measure impact using Salesforce Agentforce.
+
+Join thousands of trailblazers, nonprofits, developers, architects, admins and business leaders for an unforgettable learning experience packed with inspiration, networking and innovation.
+
 </p>
 
+<div class="buttons">
+
 <button class="primary">
-Find Grants
+
+Register Now
+
 </button>
 
 <button class="secondary">
-Our Impact
+
+Become a Sponsor
+
 </button>
 
 </div>
 
-<div class="hero-card">
+</div>
 
-<h3>Grant Overview</h3>
+<div class="right">
 
-<p><strong>Open Opportunities</strong></p>
-<h2>27</h2>
+<div class="event-card">
 
-<br>
+<h3>
 
-<p><strong>Funds Awarded</strong></p>
-<h2>₹8.2 Crore</h2>
+Event Highlights
 
-<br>
+</h3>
 
-<p><strong>Projects Supported</strong></p>
-<h2>146</h2>
+<div class="stat">
+
+<span>Date</span>
+
+<strong>August 2026</strong>
 
 </div>
 
-</section>
-
-<section class="stats">
-
 <div class="stat">
-<h2>8,450</h2>
-<p>Students Impacted</p>
+
+<span>Attendees</span>
+
+<strong>3500+</strong>
+
 </div>
 
 <div class="stat">
-<h2>312</h2>
-<p>Schools Supported</p>
+
+<span>Sessions</span>
+
+<strong>120+</strong>
+
 </div>
 
 <div class="stat">
-<h2>95%</h2>
-<p>Grant Success Rate</p>
+
+<span>Speakers</span>
+
+<strong>90+</strong>
+
+</div>
+
+<div class="stat">
+
+<span>Communities</span>
+
+<strong>40+</strong>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
 
 <section class="section">
 
-<h2>Available Funding Opportunities</h2>
+<h2 class="section-title">
 
-<div class="cards">
+Conference Experience
+
+</h2>
+
+<p class="section-sub">
+
+Everything you need to learn, connect and grow.
+
+</p>
+
+<div class="grid">
 
 <div class="card">
 
-<h3>Education Innovation Grant</h3>
+<h3>
 
-<p>Amount</p>
+🎤 Inspiring Sessions
 
-<h2>₹50 Lakhs</h2>
+</h3>
 
-<br>
+<p>
 
-<p>Eligibility Score</p>
+Technical deep dives, product updates and inspiring customer stories.
 
-<h3>98%</h3>
+</p>
 
 </div>
 
 <div class="card">
 
-<h3>Digital Classroom Grant</h3>
+<h3>
 
-<p>Amount</p>
+🤝 Networking
 
-<h2>₹25 Lakhs</h2>
+</h3>
 
-<br>
+<p>
 
-<p>Eligibility Score</p>
+Meet Salesforce professionals from around the world.
 
-<h3>91%</h3>
+</p>
 
 </div>
 
 <div class="card">
 
-<h3>Girls Education Initiative</h3>
+<h3>
 
-<p>Amount</p>
+🚀 Innovation Hub
 
-<h2>₹35 Lakhs</h2>
+</h3>
 
-<br>
+<p>
 
-<p>Eligibility Score</p>
+Experience AI, Agentforce and next-generation Salesforce solutions.
 
-<h3>94%</h3>
+</p>
 
 </div>
 
@@ -357,106 +576,89 @@ Our Impact
 
 </section>
 
-<div class="chat">
+<section class="section">
 
-<div class="chat-header">
+<h2 class="section-title">
 
-🤖 Agentforce Grant Assistant
+Your Journey
 
-</div>
+</h2>
 
-<div class="chat-body" id="chat">
+<div class="timeline">
 
-<div class="message bot">
+<div class="step">
 
-👋 Hello!
+<div class="number">1</div>
 
-I'm your Grant Assistant.
-
-Tell me about your organization and I'll help you:
-
-✅ Find grants
-
-✅ Check eligibility
-
-✅ Start an application
+Register
 
 </div>
 
-</div>
+<div class="step">
 
-<div class="chat-footer">
+<div class="number">2</div>
 
-<input
-id="message"
-placeholder="Type your question..."
->
-
-<button onclick="send()">
-Send
-</button>
+Explore Sessions
 
 </div>
 
-</div>
+<div class="step">
 
-<div class="footer">
+<div class="number">3</div>
 
-Powered by Salesforce Agentforce • Demo Homepage
-
-</div>
-
-<script>
-
-function send(){
-
-let input=document.getElementById("message");
-
-if(input.value=="") return;
-
-let chat=document.getElementById("chat");
-
-chat.innerHTML+=`
-<div class="message user">
-${input.value}
-</div>
-`;
-
-setTimeout(function(){
-
-chat.innerHTML+=`
-
-<div class="message bot">
-
-Based on your organization's profile, I found two grants that match your mission.
-
-✅ Education Innovation Grant
-
-Match Score: 98%
-
-Funding: ₹50 Lakhs
-
-Deadline: 20 Aug 2026
-
-<br><br>
-
-Would you like me to check your eligibility and pre-fill the application?
+Connect
 
 </div>
 
-`;
+<div class="step">
 
-chat.scrollTop=chat.scrollHeight;
+<div class="number">4</div>
 
-},700);
+Learn
 
-input.value="";
+</div>
 
-chat.scrollTop=chat.scrollHeight;
+<div class="step">
 
-}
+<div class="number">5</div>
 
-</script>
+Build
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Agentforce can be embedded here -->
+
+<div id="agentforce-container"></div>
+
+<footer>
+
+<h2>
+
+Future Summit 2026
+
+</h2>
+
+<br>
+
+<p>
+
+Learn. Connect. Innovate.
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 Future Summit. All Rights Reserved.
+
+</p>
+
+</footer>
 
 </body>
 </html>
